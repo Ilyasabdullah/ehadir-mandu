@@ -64,7 +64,7 @@
 </head>
 <body>
   <h1>SCAN PRESENSI</h1>
-  <p class="subtitle">TERINTEGRASI GURU & SISWA</p>
+  <p class="subtitle">MAN 2 TIDORE KEPULAUAN</p>
 
   <div id="offline-badge">Koneksi Terputus - Mode Offline</div>
   <button id="sync-btn" onclick="syncData()">🔄 Sinkronisasi Data Tertunda (<span id="queue-count">0</span>)</button>
@@ -127,7 +127,7 @@
       
       if (!navigator.onLine) {
         badge.style.display = 'block';
-        badge.innerText = "Tidak Ada Internet - Data Masuk HP";
+        badge.innerText = "Tidak Ada Internet - Tetap Scan Kartu";
         btn.style.display = scanQueue.length > 0 ? 'block' : 'none';
       } else {
         badge.style.display = 'none';
@@ -335,7 +335,7 @@
       })
       .catch(err => {
           simpanKeAntrean(dataScan);
-          tampilkanSuksesLayarPenuh("TERSAMPAN OFFLINE", "Internet terputus saat memproses.<br>Data berhasil diamankan di antrean HP.");
+          tampilkanSuksesLayarPenuh("TERSIMPAN OFFLINE", "Internet terputus saat memproses.<br>Data berhasil diamankan di antrean HP.");
       });
     }
 
